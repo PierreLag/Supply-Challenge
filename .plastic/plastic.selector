@@ -1,4 +1,0 @@
-repository "Supply Challenge/Supply Challenge@9071826796638@cloud"
-  path "/"
-    br "/main"
-    co "/main"

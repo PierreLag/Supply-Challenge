@@ -61,6 +61,11 @@ public class EnemyArmyMono : MonoBehaviour
             {
                 defendingArmy.SetAttacked(false);
                 waveOngoing = false;
+
+                if (currentWave == maxWave)
+                {
+                    EliminateArmy();
+                }
             }
         }
     }
@@ -69,5 +74,12 @@ public class EnemyArmyMono : MonoBehaviour
     {
         defendingArmy = LevelManager.GetArmy(node);
         defendingArmy.SetAttacked(true);
+    }
+
+    public void EliminateArmy()
+    {
+        // Call animation for army death
+
+        Destroy(this);
     }
 }

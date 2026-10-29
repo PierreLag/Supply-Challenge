@@ -1,0 +1,7 @@
+public enum StatEnum
+{
+    SUPPLY_MOVE_SPEED,
+    AMMO_USE_SPEED,
+    PRESSURE_MAX,
+    HQ_RESUPPLY_SPEED
+}

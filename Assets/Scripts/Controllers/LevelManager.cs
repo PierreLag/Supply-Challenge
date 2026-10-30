@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour
     private HQMono hq;
 
     [SerializeField]
-    private static AllyArmyMono allyArmyTemplate;
+    private static GameObject allyArmyTemplate;
     [SerializeField]
     private float resourceTransferTime = 5f;
 
@@ -34,7 +34,7 @@ public class LevelManager : MonoBehaviour
         s_instance.depth = 0;
 
         s_instance.armyList = new List<AllyArmyMono>();
-        s_instance.armyList.Add(GameObject.Instantiate(allyArmyTemplate));    // Need to make a linked object to attach & instantiate
+        s_instance.armyList.Add(GameObject.Instantiate(allyArmyTemplate).GetComponent<AllyArmyMono>());    // Need to make a linked object to attach & instantiate
 
         s_instance.hq = GameObject.FindGameObjectsWithTag("HQ")[0].GetComponent<HQMono>();    // Give HQ tag to gameobject with the HQ script
     }
